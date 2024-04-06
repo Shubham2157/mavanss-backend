@@ -92,6 +92,37 @@ app.get("/api/product/:id", (req, res) => {
 
 http://localhost:1337/api/products?filters[slug]=product-1&populate=*
 
+
+
+app.get('/api/categories', (req, res) => {
+  res.json(
+    [
+      { id: 1, name: 'Loading...', imageUrl: 'https://via.placeholder.com/150', slug: 'loading-1' },
+      { id: 2, name: 'Loading...', imageUrl: 'https://via.placeholder.com/150', slug: 'loading-2' },
+      { id: 3, name: 'Loading...', imageUrl: 'https://via.placeholder.com/150', slug: 'loading-3' },
+      { id: 4, name: 'Loading...', imageUrl: 'https://via.placeholder.com/150', slug: 'loading-4' },
+      { id: 5, name: 'Loading...', imageUrl: 'https://via.placeholder.com/150', slug: 'loading-5' },
+      { id: 6, name: 'Loading...', imageUrl: 'https://via.placeholder.com/150', slug: 'loading-6' }
+    ]
+  )
+})
+
+
+app.get('/api/feature-products', (req, res) => {
+  res.json(
+
+      [
+        { id: 1, title: 'Data 1', description: 'Loading...', price: 'Loading...', imageUrl: 'https://via.placeholder.com/150' },
+        { id: 2, title: 'Data 2', description: 'Loading...', price: 'Loading...', imageUrl: 'https://via.placeholder.com/150' },
+        { id: 3, title: 'Data 3', description: 'Loading...', price: 'Loading...', imageUrl: 'https://via.placeholder.com/150' },
+        { id: 4, title: 'Data 4', description: 'Loading...', price: 'Loading...', imageUrl: 'https://via.placeholder.com/150' },
+        { id: 5, title: 'Data 5', description: 'Loading...', price: 'Loading...', imageUrl: 'https://via.placeholder.com/150' },
+        { id: 6, title: 'Data 6', description: 'Loading...', price: 'Loading...', imageUrl: 'https://via.placeholder.com/150' }
+      ]
+    
+  )
+})
+
 app.listen(PORT, () => {
   console.log(`Server started on PORT : ${PORT}`);
 });
