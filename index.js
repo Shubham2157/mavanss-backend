@@ -9,7 +9,7 @@ const swaggerFile = require('./swagger-output.json')
 
 const axios = require("axios");
 
-const whitelist = ["http://localhost:3000", `${process.env.FRONTEND_URL}`]; // assuming front-end application is running on localhost port 3000
+const whitelist = ["https://mavanss.cyclic.app", `${process.env.FRONTEND_URL}`]; // assuming front-end application is running on localhost port 3000
 
 /* Middlewares */
 app.use('/api-docs', swaggerUi.serve);
